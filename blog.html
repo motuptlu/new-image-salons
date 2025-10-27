@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Care Blog Calgary | Tips & Trends | New Image Hair Salon</title>
+    <meta name="description" content="Expert hair care tips, styling tutorials, product recommendations and latest trends from New Image Hair Salon Calgary. Professional advice for beautiful, healthy hair.">
+    <meta name="keywords" content="hair care blog Calgary, hair styling tips, hair care advice Calgary, balayage trends Calgary, hair product recommendations, hair maintenance tips">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 200 200" class="logo-svg">
+                        <defs>
+                            <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="url(#navLogoGradient)" stroke-width="3"/>
+                        <text x="100" y="110" font-family="Playfair Display" font-size="48" font-weight="700" fill="url(#navLogoGradient)" text-anchor="middle">NI</text>
+                    </svg>
+                    <span class="logo-text">New Image<span class="subtitle">Hair Salon</span></span>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="team.html" class="nav-link">Our Team</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920');">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Hair Care Blog</h1>
+                <p class="page-subtitle">Expert Tips, Trends & Tutorials</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Blog</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories section-padding-small">
+        <div class="container">
+            <div class="category-filter" data-aos="fade-up">
+                <button class="category-btn active" data-category="all">All Posts</button>
+                <button class="category-btn" data-category="tips">Hair Care Tips</button>
+                <button class="category-btn" data-category="trends">Trends</button>
+                <button class="category-btn" data-category="tutorials">Tutorials</button>
+                <button class="category-btn" data-category="products">Products</button>
+                <button class="category-btn" data-category="bridal">Bridal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post section-padding-top-small">
+        <div class="container">
+            <div class="featured-post-card" data-aos="fade-up">
+                <div class="row align-center">
+                    <div class="col-6">
+                        <div class="featured-image">
+                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800" alt="Balayage Trends 2024">
+                            <span class="featured-badge">Featured</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="featured-content">
+                            <div class="post-meta">
+                                <span class="post-category">Trends</span>
+                                <span class="post-date"><i class="fas fa-calendar"></i> January 15, 2024</span>
+                            </div>
+                            <h2>Top Balayage Trends for 2024: Calgary's Hottest Looks</h2>
+                            <p>Discover the most stunning balayage techniques taking Calgary by storm this year. From subtle sun-kissed highlights to bold color melts, we break down the trends you need to know.</p>
+                            <div class="post-author">
+                                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=50" alt="Sarah Johnson">
+                                <div class="author-info">
+                                    <span class="author-name">Sarah Johnson</span>
+                                    <span class="author-title">Master Colorist</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Read Full Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section section-padding">
+        <div class="container">
+            <div class="blog-grid" id="blogGrid">
+                
+                <!-- Blog Post 1 -->
+                <article class="blog-card" data-category="tips" data-aos="fade-up" data-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600" alt="Winter Hair Care">
+                        <span class="blog-category">Hair Care Tips</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> January 10, 2024</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>Winter Hair Care: Protecting Your Hair from Calgary's Cold</h3>
+                        <p>Learn essential tips to keep your hair healthy and beautiful during harsh Calgary winters. Combat dryness, static, and damage with expert advice.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card" data-category="tutorials" data-aos="fade-up" data-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600" alt="Bridal Hair Tutorial">
+                        <span class="blog-category">Tutorials</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> January 8, 2024</span>
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3>DIY Bridal Hair: Achieving Salon-Quality Updos at Home</h3>
+                        <p>Step-by-step guide to creating elegant bridal hairstyles. Perfect for bridesmaids or practice before your big day.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card" data-category="products" data-aos="fade-up" data-delay="300">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600" alt="Hair Products">
+                        <span class="blog-category">Products</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> January 5, 2024</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Must-Have Hair Products for Healthy, Shiny Hair</h3>
+                        <p>Our stylists share their favorite professional products that deliver salon-quality results at home. From shampoos to styling products.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card" data-category="trends" data-aos="fade-up" data-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600" alt="Bob Haircut Trends">
+                        <span class="blog-category">Trends</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> January 3, 2024</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3>The Bob Revolution: Modern Takes on a Classic Cut</h3>
+                        <p>Explore the latest bob variations from textured lobs to sleek asymmetrical cuts. Find the perfect bob for your face shape.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card" data-category="tips" data-aos="fade-up" data-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600" alt="Color Maintenance">
+                        <span class="blog-category">Hair Care Tips</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> December 28, 2023</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>Maintaining Your Hair Color: Expert Tips for Long-Lasting Results</h3>
+                        <p>Protect your investment with these professional tips to keep your color vibrant and beautiful between salon visits.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card" data-category="bridal" data-aos="fade-up" data-delay="300">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600" alt="Bridal Hair Planning">
+                        <span class="blog-category">Bridal</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> December 25, 2023</span>
+                            <span><i class="fas fa-clock"></i> 10 min read</span>
+                        </div>
+                        <h3>Wedding Hair Timeline: When to Book and What to Expect</h3>
+                        <p>Complete guide to planning your bridal hair journey from engagement to wedding day. Timeline, trials, and tips included.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 7 -->
+                <article class="blog-card" data-category="tutorials" data-aos="fade-up" data-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600" alt="Beach Waves Tutorial">
+                        <span class="blog-category">Tutorials</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> December 20, 2023</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3>Perfect Beach Waves: A Stylist's Guide</h3>
+                        <p>Master the art of effortless waves with techniques and tools used by professionals. Achieve that coveted beachy texture.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 8 -->
+                <article class="blog-card" data-category="tips" data-aos="fade-up" data-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=600" alt="Hair Extension Care">
+                        <span class="blog-category">Hair Care Tips</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> December 18, 2023</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3>Hair Extension Care 101: Making Your Extensions Last</h3>
+                        <p>Essential maintenance tips to keep your extensions looking natural and beautiful. Washing, styling, and care routines explained.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 9 -->
+                <article class="blog-card" data-category="trends" data-aos="fade-up" data-delay="300">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?w=600" alt="Hair Color Trends">
+                        <span class="blog-category">Trends</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> December 15, 2023</span>
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3>Fashion-Forward Hair Colors Taking Over Calgary</h3>
+                        <p>From subtle pastels to bold vivids, explore the color trends our clients are loving. Inspiration and maintenance included.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" data-aos="fade-up">
+                <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter-section section-padding bg-light">
+        <div class="container">
+            <div class="newsletter-content text-center" data-aos="fade-up">
+                <i class="fas fa-envelope-open-text"></i>
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest hair care tips, exclusive offers, and salon updates delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 200 200" class="logo-svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="url(#footerLogoGradient)" stroke-width="3"/>
+                            <text x="100" y="110" font-family="Playfair Display" font-size="48" font-weight="700" fill="url(#footerLogoGradient)" text-anchor="middle">NI</text>
+                        </svg>
+                        <span>New Image Hair Salon</span>
+                    </div>
+                    <p>Calgary's premier destination for luxury hair care and beauty services.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/newimage_yyc" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/14037013610" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#cutting">Hair Cutting</a></li>
+                        <li><a href="services.html#color">Color & Balayage</a></li>
+                        <li><a href="services.html#bridal">Bridal Styling</a></li>
+                        <li><a href="services.html#extensions">Hair Extensions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 63 Cornerstone Cir NE, Calgary, AB</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+14037013610">+1 (403) 701-3610</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 New Image Hair Salon. All Rights Reserved. | Designed by <a href="https://hanunova.oneapp.dev/" target="_blank">HanuNova</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/14037013610?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
