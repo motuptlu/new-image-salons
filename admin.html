@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | New Image Hair Salon</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    
+    <!-- Admin Login -->
+    <div class="admin-login" id="adminLogin">
+        <div class="login-container">
+            <div class="login-header">
+                <svg viewBox="0 0 200 200" class="logo-svg">
+                    <defs>
+                        <linearGradient id="loginLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#loginLogoGradient)" stroke-width="3"/>
+                    <text x="100" y="110" font-family="Playfair Display" font-size="48" font-weight="700" fill="url(#loginLogoGradient)" text-anchor="middle">NI</text>
+                </svg>
+                <h2>Admin Panel</h2>
+                <p>New Image Hair Salon</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="adminUsername" placeholder="Enter username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter password" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                
+                <div id="loginError" class="login-error"></div>
+            </form>
+            
+            <div class="login-footer">
+                <p>Protected by HanuNova Security</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+        
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <svg viewBox="0 0 200 200" class="logo-svg-small">
+                    <defs>
+                        <linearGradient id="sidebarLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#sidebarLogoGradient)" stroke-width="3"/>
+                    <text x="100" y="110" font-family="Playfair Display" font-size="48" font-weight="700" fill="url(#sidebarLogoGradient)" text-anchor="middle">NI</text>
+                </svg>
+                <h3>Admin Panel</h3>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-section="hero">
+                    <i class="fas fa-image"></i>
+                    <span>Hero Slider</span>
+                </a>
+                <a href="#" class="nav-item" data-section="services">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>Services</span>
+                </a>
+                <a href="#" class="nav-item" data-section="team">
+                    <i class="fas fa-users"></i>
+                    <span>Team Members</span>
+                </a>
+                <a href="#" class="nav-item" data-section="gallery">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="#" class="nav-item" data-section="blog">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog Posts</span>
+                </a>
+                <a href="#" class="nav-item" data-section="reviews">
+                    <i class="fas fa-star"></i>
+                    <span>Reviews</span>
+                </a>
+                <a href="#" class="nav-item" data-section="bookings">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Bookings</span>
+                </a>
+                <a href="#" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="btn btn-outline-white btn-block" onclick="adminLogout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="sectionTitle">Dashboard</h1>
+                </div>
+                <div class="topbar-right">
+                    <a href="index.html" target="_blank" class="btn btn-outline-small">
+                        <i class="fas fa-external-link-alt"></i> View Site
+                    </a>
+                    <div class="admin-user">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section class="admin-section active" id="section-dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Bookings</h3>
+                            <p class="stat-number">247</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 12% this month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Clients</h3>
+                            <p class="stat-number">1,456</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 8% this month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-star"></i></div>
+                        <div class="stat-info">
+                            <h3>Avg. Rating</h3>
+                            <p class="stat-number">4.9</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 127 reviews</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="stat-info">
+                            <h3>Revenue</h3>
+                            <p class="stat-number">$42,890</p>
+                            <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 15% this month</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-widgets">
+                    <div class="widget">
+                        <h3>Recent Bookings</h3>
+                        <div class="widget-content">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Client</th>
+                                        <th>Service</th>
+                                        <th>Stylist</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recentBookings">
+                                    <tr>
+                                        <td>Emma Wilson</td>
+                                        <td>Balayage</td>
+                                        <td>Sarah Johnson</td>
+                                        <td>Jan 20, 2024</td>
+                                        <td><span class="status confirmed">Confirmed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Brown</td>
+                                        <td>Men's Cut</td>
+                                        <td>Michael Chen</td>
+                                        <td>Jan 20, 2024</td>
+                                        <td><span class="status pending">Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="widget">
+                        <h3>Quick Actions</h3>
+                        <div class="widget-content">
+                            <div class="quick-actions">
+                                <button class="action-btn" onclick="showSection('blog')">
+                                    <i class="fas fa-plus"></i> Add Blog Post
+                                </button>
+                                <button class="action-btn" onclick="showSection('gallery')">
+                                    <i class="fas fa-image"></i> Upload to Gallery
+                                </button>
+                                <button class="action-btn" onclick="showSection('team')">
+                                    <i class="fas fa-user-plus"></i> Add Team Member
+                                </button>
+                                <button class="action-btn" onclick="showSection('services')">
+                                    <i class="fas fa-edit"></i> Edit Services
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Slider Section -->
+            <section class="admin-section" id="section-hero">
+                <div class="section-header">
+                    <h2>Hero Slider Management</h2>
+                    <button class="btn btn-primary" onclick="addHeroSlide()">
+                        <i class="fas fa-plus"></i> Add New Slide
+                    </button>
+                </div>
+                
+                <div class="hero-slides-list" id="heroSlidesList">
+                    <!-- Slides will be loaded here -->
+                </div>
+                
+                <div class="editor-panel" id="heroEditor" style="display: none;">
+                    <h3>Edit Hero Slide</h3>
+                    <form id="heroSlideForm">
+                        <div class="form-group">
+                            <label>Slide Title</label>
+                            <input type="text" id="slideTitle" placeholder="Enter slide title">
+                        </div>
+                        <div class="form-group">
+                            <label>Slide Subtitle</label>
+                            <input type="text" id="slideSubtitle" placeholder="Enter subtitle">
+                        </div>
+                        <div class="form-group">
+                            <label>Background Image URL</label>
+                            <input type="url" id="slideImage" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label>Button 1 Text</label>
+                            <input type="text" id="slideBtn1Text" placeholder="Button text">
+                        </div>
+                        <div class="form-group">
+                            <label>Button 1 Link</label>
+                            <input type="text" id="slideBtn1Link" placeholder="URL">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Slide</button>
+                            <button type="button" class="btn btn-outline" onclick="closeHeroEditor()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="admin-section" id="section-services">
+                <div class="section-header">
+                    <h2>Services Management</h2>
+                    <button class="btn btn-primary" onclick="addService()">
+                        <i class="fas fa-plus"></i> Add New Service
+                    </button>
+                </div>
+                
+                <div class="services-grid" id="servicesList">
+                    <!-- Services will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="admin-section" id="section-team">
+                <div class="section-header">
+                    <h2>Team Members</h2>
+                    <button class="btn btn-primary" onclick="addTeamMember()">
+                        <i class="fas fa-plus"></i> Add Team Member
+                    </button>
+                </div>
+                
+                <div class="team-grid" id="teamList">
+                    <!-- Team members will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section class="admin-section" id="section-gallery">
+                <div class="section-header">
+                    <h2>Gallery Management</h2>
+                    <button class="btn btn-primary" onclick="uploadGalleryImage()">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </button>
+                </div>
+                
+                <div class="gallery-grid" id="galleryList">
+                    <!-- Gallery items will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section class="admin-section" id="section-blog">
+                <div class="section-header">
+                    <h2>Blog Posts</h2>
+                    <button class="btn btn-primary" onclick="addBlogPost()">
+                        <i class="fas fa-plus"></i> Create New Post
+                    </button>
+                </div>
+                
+                <div class="blog-list" id="blogList">
+                    <!-- Blog posts will be loaded here -->
+                </div>
+                
+                <div class="editor-panel" id="blogEditor" style="display: none;">
+                    <h3>Blog Post Editor</h3>
+                    <form id="blogPostForm">
+                        <div class="form-group">
+                            <label>Post Title</label>
+                            <input type="text" id="blogTitle" placeholder="Enter post title" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="blogCategory">
+                                <option value="tips">Hair Care Tips</option>
+                                <option value="trends">Trends</option>
+                                <option value="tutorials">Tutorials</option>
+                                <option value="products">Products</option>
+                                <option value="bridal">Bridal</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Featured Image URL</label>
+                            <input type="url" id="blogImage" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label>Excerpt</label>
+                            <textarea id="blogExcerpt" rows="3" placeholder="Brief description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Content</label>
+                            <textarea id="blogContent" rows="10" placeholder="Full blog content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Author</label>
+                            <input type="text" id="blogAuthor" placeholder="Author name">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Publish Post</button>
+                            <button type="button" class="btn btn-outline" onclick="closeBlogEditor()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="admin-section" id="section-reviews">
+                <div class="section-header">
+                    <h2>Customer Reviews</h2>
+                    <button class="btn btn-primary" onclick="syncGoogleReviews()">
+                        <i class="fab fa-google"></i> Sync Google Reviews
+                    </button>
+                </div>
+                
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Reviews will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Bookings Section -->
+            <section class="admin-section" id="section-bookings">
+                <div class="section-header">
+                    <h2>Appointment Bookings</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="pending">Pending</button>
+                        <button class="filter-btn" data-filter="confirmed">Confirmed</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+                
+                <div class="bookings-table">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Client Name</th>
+                                <th>Phone</th>
+                                <th>Service</th>
+                                <th>Stylist</th>
+                                <th>Date & Time</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookingsTableBody">
+                            <!-- Bookings will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="admin-section" id="section-settings">
+                <div class="section-header">
+                    <h2>Website Settings</h2>
+                </div>
+                
+                <div class="settings-panels">
+                    <div class="settings-panel">
+                        <h3>General Information</h3>
+                        <form id="generalSettings">
+                            <div class="form-group">
+                                <label>Salon Name</label>
+                                <input type="text" value="New Image Hair Salon">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" value="+1 (403) 701-3610">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" value="info@newimagehairsalon.ca">
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea rows="3">63 Cornerstone Cir NE, Calgary, AB T3N 1H1, Canada</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                    
+                    <div class="settings-panel">
+                        <h3>Business Hours</h3>
+                        <form id="hoursSettings">
+                            <div class="hours-editor">
+                                <div class="hours-row">
+                                    <span>Monday - Friday</span>
+                                    <input type="time" value="09:00"> - <input type="time" value="19:00">
+                                </div>
+                                <div class="hours-row">
+                                    <span>Saturday</span>
+                                    <input type="time" value="09:00"> - <input type="time" value="18:00">
+                                </div>
+                                <div class="hours-row">
+                                    <span>Sunday</span>
+                                    <input type="time" value="10:00"> - <input type="time" value="17:00">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Hours</button>
+                        </form>
+                    </div>
+                    
+                    <div class="settings-panel">
+                        <h3>Social Media Links</h3>
+                        <form id="socialSettings">
+                            <div class="form-group">
+                                <label><i class="fab fa-instagram"></i> Instagram</label>
+                                <input type="url" value="https://www.instagram.com/newimage_yyc">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fab fa-facebook"></i> Facebook</label>
+                                <input type="url" placeholder="Facebook URL">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fab fa-whatsapp"></i> WhatsApp</label>
+                                <input type="tel" value="+14037013610">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fab fa-google"></i> Google Maps</label>
+                                <input type="url" value="https://maps.app.goo.gl/a8VVR4whMfHFJiMK8">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Links</button>
+                        </form>
+                    </div>
+                    
+                    <div class="settings-panel">
+                        <h3>SEO Settings</h3>
+                        <form id="seoSettings">
+                            <div class="form-group">
+                                <label>Meta Title</label>
+                                <input type="text" value="New Image Hair Salon Calgary | Premium Hair Styling">
+                            </div>
+                            <div class="form-group">
+                                <label>Meta Description</label>
+                                <textarea rows="3">Experience luxury hair styling at New Image Hair Salon in Calgary...</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Keywords</label>
+                                <input type="text" value="hair salon Calgary, balayage, extensions, bridal hair">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save SEO Settings</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
