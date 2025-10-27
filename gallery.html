@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Gallery Calgary | Before & After Transformations | New Image Salon</title>
+    <meta name="description" content="View stunning hair transformation gallery from New Image Salon Calgary. Before & after photos of balayage, extensions, color corrections, cuts & bridal styling.">
+    <meta name="keywords" content="hair gallery Calgary, before after hair Calgary, hair transformation Calgary, balayage gallery, hair color results Calgary, salon portfolio Calgary">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 200 200" class="logo-svg">
+                        <defs>
+                            <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="url(#navLogoGradient)" stroke-width="3"/>
+                        <text x="100" y="110" font-family="Playfair Display" font-size="48" font-weight="700" fill="url(#navLogoGradient)" text-anchor="middle">NI</text>
+                    </svg>
+                    <span class="logo-text">New Image<span class="subtitle">Hair Salon</span></span>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="team.html" class="nav-link">Our Team</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920');">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Gallery</h1>
+                <p class="page-subtitle">Witness Our Stunning Transformations</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Gallery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters section-padding-small">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="color">Color & Balayage</button>
+                <button class="filter-btn" data-filter="cutting">Haircuts</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+                <button class="filter-btn" data-filter="extensions">Extensions</button>
+                <button class="filter-btn" data-filter="treatments">Treatments</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section section-padding-top-small">
+        <div class="container-fluid">
+            <div class="masonry-gallery" id="galleryGrid">
+                
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item-large" data-category="color" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800" alt="Balayage Blonde Transformation Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Balayage Blonde</h3>
+                            <p>Color Transformation</p>
+                            <button class="gallery-btn" onclick="openLightbox(0)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item-large" data-category="cutting" data-aos="fade-up" data-delay="100">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" alt="Precision Bob Cut Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Modern Bob Cut</h3>
+                            <p>Precision Cutting</p>
+                            <button class="gallery-btn" onclick="openLightbox(1)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item-large" data-category="bridal" data-aos="fade-up" data-delay="200">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800" alt="Bridal Updo Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Elegant Bridal Updo</h3>
+                            <p>Wedding Hair</p>
+                            <button class="gallery-btn" onclick="openLightbox(2)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item-large" data-category="extensions" data-aos="fade-up" data-delay="300">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800" alt="Hair Extensions Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Tape-In Extensions</h3>
+                            <p>Length & Volume</p>
+                            <button class="gallery-btn" onclick="openLightbox(3)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item-large" data-category="color" data-aos="fade-up" data-delay="400">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800" alt="Ombre Hair Color Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Ombre Color Melt</h3>
+                            <p>Color Specialist</p>
+                            <button class="gallery-btn" onclick="openLightbox(4)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item-large" data-category="treatments" data-aos="fade-up" data-delay="500">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800" alt="Keratin Treatment Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Keratin Smoothing</h3>
+                            <p>Hair Treatment</p>
+                            <button class="gallery-btn" onclick="openLightbox(5)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item-large" data-category="cutting" data-aos="fade-up" data-delay="600">
+                    <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?w=800" alt="Layered Haircut Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Textured Layers</h3>
+                            <p>Modern Cut</p>
+                            <button class="gallery-btn" onclick="openLightbox(6)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item-large" data-category="color" data-aos="fade-up" data-delay="700">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800" alt="Highlights Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Dimensional Highlights</h3>
+                            <p>Color Enhancement</p>
+                            <button class="gallery-btn" onclick="openLightbox(7)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item-large" data-category="bridal" data-aos="fade-up" data-delay="800">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800" alt="Bridal Half Up Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Romantic Half-Up</h3>
+                            <p>Bridal Style</p>
+                            <button class="gallery-btn" onclick="openLightbox(8)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item-large" data-category="extensions" data-aos="fade-up" data-delay="900">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800" alt="Volume Extensions Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Volume Extensions</h3>
+                            <p>Instant Fullness</p>
+                            <button class="gallery-btn" onclick="openLightbox(9)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item-large" data-category="color" data-aos="fade-up" data-delay="1000">
+                    <img src="https://images.unsplash.com/photo-1605980413717-5f5f96c1a9f4?w=800" alt="Platinum Blonde Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Platinum Blonde</h3>
+                            <p>Bold Transformation</p>
+                            <button class="gallery-btn" onclick="openLightbox(10)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item-large" data-category="cutting" data-aos="fade-up" data-delay="1100">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800" alt="Men's Haircut Calgary">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Men's Fade Cut</h3>
+                            <p>Modern Grooming</p>
+                            <button class="gallery-btn" onclick="openLightbox(11)">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" onclick="changeLightboxImage(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" onclick="changeLightboxImage(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-feed section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">Follow Us</span>
+                <h2 class="section-title">@newimage_yyc on Instagram</h2>
+                <p class="section-description">See our latest work and daily inspiration</p>
+            </div>
+            
+            <div class="instagram-grid">
+                <a href="https://www.instagram.com/newimage_yyc" target="_blank" class="instagram-item" data-aos="zoom-in" data-delay="100">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/newimage_yyc" target="_blank" class="instagram-item" data-aos="zoom-in" data-delay="200">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/newimage_yyc" target="_blank" class="instagram-item" data-aos="zoom-in" data-delay="300">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/newimage_yyc" target="_blank" class="instagram-item" data-aos="zoom-in" data-delay="400">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/newimage_yyc" target="_blank" class="instagram-item" data-aos="zoom-in" data-delay="500">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/newimage_yyc" target="_blank" class="instagram-item" data-aos="zoom-in" data-delay="600">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center" data-aos="fade-up">
+                <a href="https://www.instagram.com/newimage_yyc" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-instagram"></i> Follow Us on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" style="background-image: linear-gradient(rgba(212, 175, 55, 0.9), rgba(212, 175, 55, 0.9)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920');">
+        <div class="container">
+            <div class="cta-content text-center" data-aos="zoom-in">
+                <h2 class="cta-title">Ready for Your Transformation?</h2>
+                <p class="cta-description">Let's create your perfect look together</p>
+                <a href="booking.html" class="btn btn-white btn-large">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 200 200" class="logo-svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="url(#footerLogoGradient)" stroke-width="3"/>
+                            <text x="100" y="110" font-family="Playfair Display" font-size="48" font-weight="700" fill="url(#footerLogoGradient)" text-anchor="middle">NI</text>
+                        </svg>
+                        <span>New Image Hair Salon</span>
+                    </div>
+                    <p>Calgary's premier destination for luxury hair care and beauty services.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/newimage_yyc" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/14037013610" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#cutting">Hair Cutting</a></li>
+                        <li><a href="services.html#color">Color & Balayage</a></li>
+                        <li><a href="services.html#bridal">Bridal Styling</a></li>
+                        <li><a href="services.html#extensions">Hair Extensions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 63 Cornerstone Cir NE, Calgary, AB</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+14037013610">+1 (403) 701-3610</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 New Image Hair Salon. All Rights Reserved. | Designed by <a href="https://hanunova.oneapp.dev/" target="_blank">HanuNova</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/14037013610?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
