@@ -1,0 +1,949 @@
+/* ================================
+   New Image Hair Salon - Responsive Styles
+   Designed by HanuNova
+   ================================ */
+
+/* ===== Extra Large Devices (1400px and up) ===== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* ===== Large Devices (1200px and up) ===== */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* ===== Medium Devices (992px and up) ===== */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 300px;
+        height: calc(100vh - 80px);
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 30px;
+        gap: 0;
+        transition: left 0.4s ease;
+        z-index: 9998;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Sections */
+    .section-padding {
+        padding: 80px 0;
+    }
+    
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    
+    /* Grid Systems */
+    .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .row {
+        margin: 0 -10px;
+    }
+    
+    .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-12 {
+        padding: 0 10px;
+    }
+    
+    /* About Section */
+    .image-collage {
+        height: 400px;
+        margin-bottom: 40px;
+    }
+    
+    .experience-badge {
+        width: 120px;
+        height: 120px;
+        left: 35%;
+    }
+    
+    .badge-number {
+        font-size: 2.5rem;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .service-image {
+        height: 250px;
+    }
+    
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Team */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* Gallery */
+    .gallery-grid, .masonry-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .gallery-item, .gallery-item-large {
+        height: 280px;
+    }
+    
+    /* Footer */
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    /* CTA */
+    .cta-title {
+        font-size: 2.5rem;
+    }
+    
+    .cta-description {
+        font-size: 1.1rem;
+    }
+    
+    /* Contact */
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Blog */
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Small Devices (768px and up) ===== */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    /* Typography */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.1rem; }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    /* Navigation */
+    .logo-text {
+        font-size: 18px;
+    }
+    
+    .logo-svg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Hero */
+    .hero-section {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    .slider-controls {
+        bottom: 30px;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .slider-dots {
+        bottom: 90px;
+    }
+    
+    /* Sections */
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .section-padding-small {
+        padding: 40px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-subtitle {
+        font-size: 12px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    
+    .btn-large {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+    
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+    
+    /* About */
+    .image-collage {
+        height: 350px;
+    }
+    
+    .collage-img.img-1 {
+        width: 70%;
+        height: 65%;
+    }
+    
+    .collage-img.img-2 {
+        width: 60%;
+        height: 55%;
+    }
+    
+    .experience-badge {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .badge-number {
+        font-size: 2rem;
+    }
+    
+    .badge-text {
+        font-size: 0.85rem;
+    }
+    
+    /* Services */
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    
+    /* Team */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-image {
+        height: 300px;
+    }
+    
+    /* Gallery */
+    .gallery-grid, .masonry-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item, .gallery-item-large {
+        height: 250px;
+    }
+    
+    /* Reviews */
+    .review-card {
+        padding: 30px 20px;
+    }
+    
+    .review-text {
+        font-size: 1rem;
+    }
+    
+    /* Page Hero */
+    .page-hero {
+        height: 300px;
+        margin-top: 70px;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    /* Contact */
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-card {
+        padding: 30px 20px;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 60px 0 20px;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* CTA */
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    /* Blog */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Form */
+    .form-row, .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* WhatsApp & Scroll Buttons */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .scroll-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* ===== Extra Small Devices (576px and up) ===== */
+@media (max-width: 575px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.2rem; }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    /* Navigation */
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 12px 0;
+    }
+    
+    .logo {
+        font-size: 16px;
+        gap: 10px;
+    }
+    
+    .logo-svg {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-text .subtitle {
+        font-size: 10px;
+    }
+    
+    .nav-menu {
+        width: 100%;
+        left: -100%;
+    }
+    
+    .nav-actions .btn {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    
+    /* Hero */
+    .hero-section {
+        height: 60vh;
+        min-height: 450px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .hero-buttons {
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .slider-dots {
+        bottom: 80px;
+    }
+    
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .slider-dot.active {
+        width: 30px;
+    }
+    
+    /* Sections */
+    .section-padding {
+        padding: 50px 0;
+    }
+    
+    .section-padding-small {
+        padding: 30px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-subtitle {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+    
+    .section-description {
+        font-size: 0.95rem;
+    }
+    
+    /* Feature Cards */
+    .feature-card {
+        padding: 30px 20px;
+    }
+    
+    .feature-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* About */
+    .image-collage {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .experience-badge {
+        width: 90px;
+        height: 90px;
+        left: 30%;
+        bottom: 10px;
+    }
+    
+    .badge-number {
+        font-size: 1.8rem;
+    }
+    
+    .badge-text {
+        font-size: 0.75rem;
+    }
+    
+    /* Services */
+    .service-image {
+        height: 200px;
+    }
+    
+    .service-content {
+        padding: 20px;
+    }
+    
+    .service-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Gallery */
+    .gallery-item, .gallery-item-large {
+        height: 220px;
+    }
+    
+    .gallery-overlay {
+        padding: 20px;
+    }
+    
+    .gallery-overlay h4 {
+        font-size: 1.1rem;
+    }
+    
+    /* Team */
+    .team-image {
+        height: 280px;
+    }
+    
+    .team-content {
+        padding: 20px;
+    }
+    
+    .team-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Reviews */
+    .review-card {
+        padding: 25px 15px;
+    }
+    
+    .review-stars {
+        font-size: 18px;
+    }
+    
+    .review-text {
+        font-size: 0.95rem;
+    }
+    
+    /* Page Hero */
+    .page-hero {
+        height: 250px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .breadcrumb {
+        font-size: 12px;
+    }
+    
+    /* Contact */
+    .contact-info-card {
+        padding: 25px 15px;
+    }
+    
+    .contact-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+    
+    .contact-info-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Map */
+    .map-container iframe {
+        height: 300px;
+    }
+    
+    /* FAQ */
+    .faq-question {
+        padding: 15px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .faq-answer p {
+        padding: 0 20px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-logo {
+        font-size: 18px;
+    }
+    
+    .footer-column h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-top {
+        gap: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .footer-bottom {
+        font-size: 12px;
+    }
+    
+    /* CTA */
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-description {
+        font-size: 0.95rem;
+    }
+    
+    /* Stats */
+    .stat-item {
+        padding: 25px 15px;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    /* Blog */
+    .blog-image {
+        height: 200px;
+    }
+    
+    .blog-content {
+        padding: 20px;
+    }
+    
+    .blog-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .btn-large {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    /* Form Elements */
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    /* WhatsApp & Scroll */
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .scroll-to-top {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+/* ===== Mobile Landscape Optimization ===== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero-section {
+        height: 100vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .slider-controls {
+        bottom: 20px;
+    }
+}
+
+/* ===== Touch Device Optimizations ===== */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover::before {
+        width: 0;
+        height: 0;
+    }
+    
+    .service-overlay,
+    .gallery-overlay {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(26,26,26,0.8), transparent);
+    }
+    
+    .team-social {
+        opacity: 1;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .navbar,
+    .hero-section,
+    .whatsapp-float,
+    .scroll-to-top,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+    }
+    
+    .section-padding {
+        padding: 20px 0;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+/* ===== High DPI Screens ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-svg,
+    .service-icon,
+    .feature-icon {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ===== Dark Mode Support (Optional) ===== */
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles if needed */
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-scroll,
+    .experience-badge {
+        animation: none;
+    }
+}
+
+/* ===== Accessibility Improvements ===== */
+@media (max-width: 767px) {
+    /* Larger touch targets for mobile */
+    .btn,
+    .nav-link,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Better spacing for readability */
+    p {
+        line-height: 1.8;
+    }
+}
